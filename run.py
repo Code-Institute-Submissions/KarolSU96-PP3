@@ -40,7 +40,29 @@ def game():
         
     print("\n Computer board:")
     computer_grid()
-
-
+    #Gets input for targeted row of opponent grid.
+    def input_row():
+        while True:
+            try:
+                targeted_row = int(input("Target row:\n"))
+                if 1 <= targeted_row <=5:
+                    return input_row
+            except ValueError:
+                print("Please write numbers!")
+            else:
+                print("Number out of range! Chose from 1 to 5.")
+    input_row()
+    #Gets input for targeted column of opponent grid.
+    def input_col():
+        while True:
+            try:
+                targeted_col = int(input("Target column:\n"))
+                if 1 <= targeted_col <=5:
+                    return input_col
+            except ValueError:
+                print("Please write numbers!")
+            else:
+                print("Number out of range! Chose from 1 to 5.")
+    input_col()            
 game()
 
