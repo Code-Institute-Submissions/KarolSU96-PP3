@@ -37,10 +37,10 @@ def game():
     def computer_grid():
         for row in computer_board:
             print(" ".join(row))
+        
     print("\n Computer board:")
-    print(f"{computer_grid()}\n")
+    computer_grid()
 
-    
 
 game()
 
