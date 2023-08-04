@@ -23,6 +23,13 @@ def game():
         for row in board:
             print(" ".join(row))
     
+    
+    for _ in range(4):
+        row, col = random.randint(0,4), random.randint(0,4)
+        while board[row][col] == "@":
+            row, col = random.randint(0,4), random.randint(0,4)
+        board[row][col]= "@"
+
     grid = board_grid()
 game()
 
