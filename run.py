@@ -40,6 +40,7 @@ def game():
         
     print("\n Computer board:")
     computer_grid()
+
     #Gets input for targeted row of opponent grid.
     def input_row():
         while True:
@@ -52,6 +53,7 @@ def game():
             else:
                 print("Number out of range! Chose from 1 to 5.")
     input_row()
+
     #Gets input for targeted column of opponent grid.
     def input_col():
         while True:
@@ -63,6 +65,15 @@ def game():
                 print("Please write numbers!")
             else:
                 print("Number out of range! Chose from 1 to 5.")
-    input_col()            
+    input_col()
+
+    #Displays progress of the game after palyers action.
+    def display_progress(board):
+
+        
+        #Board function iteration + target with "*" when missed. X when hit. !! Change board to it's own function!
+        pass
+
+
 game()
 
