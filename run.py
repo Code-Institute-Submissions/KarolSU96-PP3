@@ -17,7 +17,7 @@ def game():
     
     print(f"{player} board:\n")
 
-    # Creates board for the game.
+    # Creates the grid for the game.
     board = [["." for _ in range(5)] for _ in range(5)]
     def board_grid():
         for row in board:
@@ -30,8 +30,17 @@ def game():
             while board[row][col] == "@":
                 row, col = random.randint(0,4), random.randint(0,4)
             board[row][col]= "@"
-
-    grid = board_grid()
     random_ship()
+    grid = board_grid()
+    
+    computer_board = [["." for _ in range(5)] for _ in range(5)]
+    def computer_grid():
+        for row in computer_board:
+            print(" ".join(row))
+    print("\n Computer board:")
+    print(f"{computer_grid()}\n")
+
+    
+
 game()
 
