@@ -86,7 +86,6 @@ def game():
     def shot(player_row, player_col, computer_row, computer_col):
         player_hits = []
         computer_hits = []
-        
         #Player
         if computer_board[player_row][player_col] == "@":
             computer_board[player_row][player_col] = "X"
@@ -99,7 +98,7 @@ def game():
             board[computer_row][computer_col] = "X"
             computer_hits.append((computer_row, computer_col))
         else:
-            computer_board[player_row][player_col] = "*"
+            board[player_row][player_col] = "*"
 
         print(f"\n{player}'s board:")
         board_grid()
@@ -107,5 +106,7 @@ def game():
         computer_grid()
     shot(player_row, player_col, computer_row, computer_col)
     
+    while any("@" in row for row in board) and any("@" in row for row in computer_board):
+        p
 
 game()
