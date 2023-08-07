@@ -78,10 +78,12 @@ def game():
                 print("Number out of range! Chose from 1 to 5.")
     
 
-    targeted_row = input_row()
-    targeted_col = input_col()
+    player_row = input_row() -1
+    player_col = input_col() -1
+    computer_row = random.randint(0,4)
+    computer_col = random.randint(0,4)
     
-    def shot(player_row, player_col):
+    def shot(player_row, player_col, computer_row, computer_col):
         player_hits = []
         computer_hits = []
         
@@ -92,8 +94,13 @@ def game():
         else:
             computer_board[player_row][player_col] = "*"    
         
+        #Computer
+        if board[computer_row][computer_col] == "@":
+            board[computer_row][computer_col] = "X"
+            computer_hits.append((computer_row, computer_col))
+        else:
+            computer_board[player_row][player_col] = "*"
 
-    shot(targeted_row - 1, targeted_col - 1)
+    shot(player_row, player_col, computer_row, computer_col)
 
 game()
-
