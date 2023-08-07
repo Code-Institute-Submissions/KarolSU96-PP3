@@ -64,8 +64,7 @@ def game():
                 print("Please write numbers!")
             else:
                 print("Number out of range! Chose from 1 to 5.")
-    input_row()
-
+    
     #Gets input for targeted column of opponent grid.
     def input_col():
         while True:
@@ -77,25 +76,24 @@ def game():
                 print("Please write numbers!")
             else:
                 print("Number out of range! Chose from 1 to 5.")
-    input_col()
-
-    player_col = targeted_col - 1 
-    player_row = targeted_row - 1 
     
-    def shot():
+
+    targeted_row = input_row()
+    targeted_col = input_col()
+    
+    def shot(player_row, player_col):
         player_hits = []
         computer_hits = []
-
+        
         #Player
-        player_row = targeted_row - 1   #Convert the input to 0-based index
-        player_col = targeted_col - 1   #Convert the input to 0-based index
         if computer_board[player_row][player_col] == "@":
             computer_board[player_row][player_col] = "X"
             player_hits.append((player_row, player_col))  # Add the hit to player_hits
         else:
             computer_board[player_row][player_col] = "*"    
-        #Board function iteration + target with "*" when missed. X when hit. !! Change board to it's own function!
+        
 
-    shot()
+    shot(targeted_row - 1, targeted_col - 1)
+
 game()
 
