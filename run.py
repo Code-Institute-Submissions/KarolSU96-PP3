@@ -101,6 +101,11 @@ def game():
         else:
             computer_board[player_row][player_col] = "*"
 
+        print(f"\n{player}'s board:")
+        board_grid()
+        print('\nComputer board:\n')
+        computer_grid()
     shot(player_row, player_col, computer_row, computer_col)
+    
 
 game()
