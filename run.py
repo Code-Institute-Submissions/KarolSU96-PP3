@@ -33,13 +33,25 @@ def game():
     random_ship()
     grid = board_grid()
     
+    
+        
+    print("\nComputer board:\n")
+
     computer_board = [["." for _ in range(5)] for _ in range(5)]
     def computer_grid():
         for row in computer_board:
             print(" ".join(row))
-        
-    print("\n Computer board:")
+
+    def random_ship_comp():
+        for _ in range(4):
+            row, col = random.randint(0,4), random.randint(0,4)
+            while computer_board[row][col] == "@":
+                row, col = random.randint(0,4), random.randint(0,4)
+            computer_board[row][col]= "@"
+    random_ship_comp()
     computer_grid()
+    
+    
 
     #Gets input for targeted row of opponent grid.
     def input_row():
@@ -47,7 +59,7 @@ def game():
             try:
                 targeted_row = int(input("Target row:\n"))
                 if 1 <= targeted_row <=5:
-                    return input_row
+                    return targeted_row
             except ValueError:
                 print("Please write numbers!")
             else:
@@ -60,7 +72,7 @@ def game():
             try:
                 targeted_col = int(input("Target column:\n"))
                 if 1 <= targeted_col <=5:
-                    return input_col
+                    return targeted_col
             except ValueError:
                 print("Please write numbers!")
             else:
@@ -69,7 +81,7 @@ def game():
 
     #Displays progress of the game after palyers action.
     def display_progress(board):
-
+        
         
         #Board function iteration + target with "*" when missed. X when hit. !! Change board to it's own function!
         pass
