@@ -14,9 +14,6 @@ def game():
     print("Top left corner is row: 0, col: 0\n")
     player = input("Please enter your name: ")
 
-    
-    print(f"{player} board:\n")
-
     # Creates the grid for the game.
     board = [["." for _ in range(5)] for _ in range(5)]
     def board_grid():
@@ -31,11 +28,7 @@ def game():
                 row, col = random.randint(0,4), random.randint(0,4)
             board[row][col]= "@"
     random_ship()
-    grid = board_grid()
     
-    
-        
-    print("\nComputer board:\n")
 
     computer_board = [["." for _ in range(5)] for _ in range(5)]
     def computer_grid():
@@ -49,7 +42,7 @@ def game():
                 row, col = random.randint(0,4), random.randint(0,4)
             computer_board[row][col]= "@"
     random_ship_comp()
-    computer_grid()
+    
     
     
 
@@ -79,13 +72,12 @@ def game():
     
 
     
-    def player_shot(player_row, player_col, computer_row, computer_col):
+    def player_shot():
         player_row = input_row() -1
         player_col = input_col() -1
         
         if computer_board[player_row][player_col] == "@":
             computer_board[player_row][player_col] = "X"
-            player_hits.append((player_row, player_col))  # Add the hit to player_hits
             return True
         else:
             computer_board[player_row][player_col] = "*"    
@@ -96,10 +88,9 @@ def game():
         computer_col = random.randint(0,4)
         if board[computer_row][computer_col] == "@":
             board[computer_row][computer_col] = "X"
-            computer_hits.append((computer_row, computer_col))
             return True
         else:
-            board[player_row][player_col] = "*"
+            board[computer_row][computer_col] = "*"
             return False
 
         
@@ -124,7 +115,11 @@ def game():
         else:
             print("Computer missed!")
 
-            
-            
+        if not any("@" in row for row in board):
+            print("Computer won!")
+            break
+        elif not any("@" in row for row in computer_board):
+            print(f"{player} won!")
+            break
 
 game()
