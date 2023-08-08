@@ -112,12 +112,19 @@ def game():
         
         print("\nPlayer's turn:")
         player_hit = player_shot()
-        if player hit:
+        if player_hit:
             print("You hit a ship")
         else:
             print("You missed!")
 
         print("Computer turn:")
+        computer_hit = computer_shot()
+        if computer_hit:
+            print("Computer hit your ship!")
+        else:
+            print("Computer missed!")
+
+            
             
 
 game()
