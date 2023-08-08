@@ -32,8 +32,17 @@ def game():
     #Computer board
     computer_board = [["." for _ in range(5)] for _ in range(5)]
     def computer_grid():
-        for row in computer_board:
+        copied_board = [["." for _ in range(5)] for _ in range(5)]
+        for hit_row, hit_col in computer_hits:
+            if computer_baord[hit_row][hit_col] == "X":
+                copied_board[hit_row][hit_col] = "X"
+            else:
+                copied_board[hit_row][hit_col] = "*"    
+        for row in copied_board:
             print(" ".join(row))
+
+
+            
     
     #Randomly places 4 ships on computer board
     def random_ship_comp():
@@ -42,11 +51,7 @@ def game():
             while computer_board[row][col] == "@":
                 row, col = random.randint(0,4), random.randint(0,4)
             computer_board[row][col]= "@"
-    random_ship_comp()
     
-    
-    
-
     #Gets input for targeted row of opponent grid.
     def input_row():
         while True:
@@ -70,8 +75,8 @@ def game():
                 print("Please write numbers!")
             else:
                 print("Number out of range! Chose from 1 to 5.")
-    
 
+   
     
     def player_shot():
         player_row = input_row() -1
