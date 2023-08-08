@@ -29,12 +29,13 @@ def game():
             board[row][col]= "@"
     random_ship()
     
-
+    #Computer board
     computer_board = [["." for _ in range(5)] for _ in range(5)]
     def computer_grid():
         for row in computer_board:
             print(" ".join(row))
-
+    
+    #Randomly places 4 ships on computer board
     def random_ship_comp():
         for _ in range(4):
             row, col = random.randint(0,4), random.randint(0,4)
