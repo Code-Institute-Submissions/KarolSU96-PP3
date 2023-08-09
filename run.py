@@ -139,5 +139,10 @@ def game():
             computer_grid()
             print(f"{player} won!")
             break
-
+        elif not any("@" in row for row in board) and not any ("@" in row for row in computer_board):
+            print(f"\n{player}'s board:\n")
+            board_grid()
+            print("\nComputer board:\n")
+            computer_grid()
+            print("Tie!")
 game()
