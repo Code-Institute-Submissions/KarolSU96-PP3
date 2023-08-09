@@ -6,7 +6,7 @@ import random
 
 def game():
     """
-    Starts the game, greets user and waits for the input
+    Main game function. Starts and runs the game
     """
     
     print("Welcome to the Battleship game")
@@ -33,17 +33,17 @@ def game():
     computer_board = [["." for _ in range(5)] for _ in range(5)]
     def computer_grid():
         copied_board = [["." for _ in range(5)] for _ in range(5)]
-        for hit_row, hit_col in computer_hits:
-            if computer_baord[hit_row][hit_col] == "X":
-                copied_board[hit_row][hit_col] = "X"
-            else:
-                copied_board[hit_row][hit_col] = "*"    
+        for row in range(5):
+            for col in range(5):
+                if computer_board[row][col] == "X":
+                    copied_board[row][col] = "X"
+                if computer_board[row][col] == "*":
+                    copied_board[row][col] = "*"
+                elif computer_board[row][col]== ".":        
+                    copied_board[row][col] = "."    
         for row in copied_board:
             print(" ".join(row))
 
-
-            
-    
     #Randomly places 4 ships on computer board
     def random_ship_comp():
         for _ in range(4):
@@ -51,6 +51,7 @@ def game():
             while computer_board[row][col] == "@":
                 row, col = random.randint(0,4), random.randint(0,4)
             computer_board[row][col]= "@"
+    random_ship_comp()        
     
     #Gets input for targeted row of opponent grid.
     def input_row():
