@@ -126,9 +126,17 @@ def game():
             print("Computer missed!")
 
         if not any("@" in row for row in board):
+            print(f"\n{player}'s board:\n")
+            board_grid()
+            print("\nComputer board:\n")
+            computer_grid()
             print("Computer won!")
             break
         elif not any("@" in row for row in computer_board):
+            print(f"\n{player}'s board:\n")
+            board_grid()
+            print("\nComputer board:\n")
+            computer_grid()
             print(f"{player} won!")
             break
 
