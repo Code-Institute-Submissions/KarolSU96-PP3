@@ -96,6 +96,9 @@ def game():
         if board[computer_row][computer_col] == "@":
             board[computer_row][computer_col] = "X"
             return True
+        if board[computer_row][computer_col] == "X":
+            board[computer_row][computer_col] = "X"
+            return True
         else:
             board[computer_row][computer_col] = "*"
             return False
