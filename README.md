@@ -3,6 +3,8 @@
 The Battleships is a Python terminal game that runs on Heroku using Code Institute mock terminal.
 The players compete against the computer and try to shot down computers ships before computer does that.
 
+![Game](./readme-images/game.png)
+
 ## How to play
 
 At the beginning the playe is prompted to enter their name.
@@ -24,12 +26,13 @@ The winner sinks opponent's battleships first.
     ![Name](./readme-images/name.png)
 
 - Computer as opponent
-    - The computer places it's shots randomly on the board.
 - Random ship placement
 - Displaying both game boards each turn
 - Win conditions
 - Error handling
+
     ![Error](./readme-images/error.png)
+
 - Clear interface
 
 
