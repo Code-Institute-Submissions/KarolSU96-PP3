@@ -54,7 +54,7 @@ If the player provides invalid input, they will be prompted to enter valid numer
 
     ![Error](./readme-images/error.png)
 
-- If borth, the player and the computer win, a tie will be announced.
+- If borth, the player and the computer win, a tie will be announced. The game stops whenever there are no ships on one of or both of the boards.
 
 ## Bugs
 
@@ -72,6 +72,10 @@ To deploy this project on heroku:
 4. Add the Github link for the repository.
 5. Click on Deploy button. 
 
+
+## Credits
+
+- Code Institute for the deployment terminal
 
 
 
