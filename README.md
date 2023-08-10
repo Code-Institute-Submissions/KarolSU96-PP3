@@ -1,32 +1,43 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleships game
 
-Welcome,
+The Battleships is a Python terminal game that runs on Heroku using Code Institute mock terminal.
+The players compete against the computer and try to shot down computers ships before computer does that.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+## How to play
 
-## Reminders
+At the beginning the playe is prompted to enter their name.
+After that he receives his board with randomly placed ships.
+The board of the computer is displayed under the players board.
+The hits are marked with "X" and misses with "*".
+Each round the player and computer target each others boards.
+The winner sinks opponent's battleships first. 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
+## Features
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+- Greeting of the player and short explanation of the game
+- Customisable player name
+- Computer as opponent
+- Random ship placement
+- Displaying both game boards each turn
+- Win conditions
+- Error Handling
+- Clear interface
 
-1. `heroku/python`
-2. `heroku/nodejs`
+## Validator Testing 
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+- PEP8  https://pep8ci.herokuapp.com/ - All clear, no errors found
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+## Deployment
 
-Connect your GitHub repository and deploy as normal.
+This project was deployed using Code Institute's mock terminal for Heroku.
 
-## Constraints
+To deploy this project on heroku: 
+1. Clone this GitHub repository.
+2. Go to Heroku https://dashboard.heroku.com/apps and add a new app.
+3. For the buildbacks Chose the "Python" and "NodeJS".
+4. Add the Github link for the repository.
+5. Click on Deploy button. 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
----
 
-Happy coding!
