@@ -57,4 +57,12 @@ To deploy this project on heroku:
 5. Click on Deploy button. 
 
 
+## Credits 
+
+Development of this game was inspired by Code Insitute Ultimate Battleship game.
+I also supplemented my code with sniplets from below mentioned websites:
+- https://stackoverflow.com/questions/46621408/5x5-grid-in-python
+- https://bigmonty12.github.io/battleship
+- 
+
 
