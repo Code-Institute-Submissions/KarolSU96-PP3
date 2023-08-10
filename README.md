@@ -46,9 +46,13 @@ The players compete against the computer and try to shot down computers ships be
 ## Testing 
 
 - PEP8 Valdator  https://pep8ci.herokuapp.com/ - All clear, no errors found
+
+    ![Pep](./readme-images/pep8.png)
+
 - The game handles the wrong inputs for rows and columns by accepting only the numbers from 1 to 5.
 If the player provides invalid input, they will be prompted to enter valid numeric values between 1 to 5.
-![Error](./readme-images/error.png)
+
+    ![Error](./readme-images/error.png)
 
 ## Bugs
 
