@@ -25,8 +25,9 @@ The winner sinks opponent's battleships first.
 - Displaying both game boards each turn
 - Win conditions
 - Error handling
-
+    ![Error](./readme-images/error.png)
 - Clear interface
+    
 
 ## Validator Testing 
 
