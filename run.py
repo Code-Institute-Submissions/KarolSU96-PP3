@@ -81,6 +81,7 @@ def game():
                 print("Number out of range! Chose from 1 to 5.")
 
     def player_shot():
+        #Changing the int to index starting from 0
         player_row = input_row() - 1
         player_col = input_col() - 1
 
