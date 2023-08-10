@@ -21,12 +21,12 @@ The winner sinks opponent's battleships first.
 - Random ship placement
 - Displaying both game boards each turn
 - Win conditions
-- Error Handling
+- Error handling
 - Clear interface
 
 ## Validator Testing 
 
-- PEP8  https://pep8ci.herokuapp.com/ - All clear, no errors found
+PEP8  https://pep8ci.herokuapp.com/ - All clear, no errors found
 
 ## Deployment
 
