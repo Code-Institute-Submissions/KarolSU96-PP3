@@ -5,14 +5,25 @@ The players compete against the computer and try to shot down computers ships be
 
 ![Game](./readme-images/game.png)
 
+## User stories
+
+### Player goals
+ - As a player, I want to quickly gasp the rules and objective of the game.
+ - I want a straightforward way to start the game.
+ - I want to add my name in game and be able to clearly identify my board.
+ - I want feedback on whather my shots hit the computer's ships or missed. 
+ - I want the game to accurately determine and announce the winner when all ships on onse side are sunk.
+ - I want to be able to view the final state of the game before seeing who won. 
+
+
 ## How to play
 
-At the beginning the playe is prompted to enter their name.
-After that he receives his board with randomly placed ships.
-The board of the computer is displayed under the players board.
-The hits are marked with "X" and misses with "*".
-Each round the player and computer target each others boards.
-The winner sinks opponent's battleships first. 
+- At the beginning the playe is prompted to enter their name.
+- After that he receives his board with randomly placed ships.
+- The board of the computer is displayed under the players board.
+- The hits are marked with "X" and misses with "*".
+- Each round the player and computer target each others boards.
+- The winner sinks opponent's battleships first. 
 
 
 ## Features
@@ -29,10 +40,6 @@ The winner sinks opponent's battleships first.
 - Random ship placement
 - Displaying both game boards each turn
 - Win conditions
-- Error handling
-
-    ![Error](./readme-images/error.png)
-
 - Clear interface
 
 
@@ -57,12 +64,5 @@ To deploy this project on heroku:
 5. Click on Deploy button. 
 
 
-## Credits 
-
-Development of this game was inspired by Code Insitute Ultimate Battleship game.
-I also supplemented my code with sniplets from below mentioned websites:
-- https://stackoverflow.com/questions/46621408/5x5-grid-in-python
-- https://bigmonty12.github.io/battleship
-- 
 
 

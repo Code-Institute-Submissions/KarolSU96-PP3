@@ -7,8 +7,10 @@ def game():
     """
 
     print("Welcome to the Battleship game")
+    print("Sink the computer's ships to win")
     print("Board size: 5. Number of ships: 4")
     print("Top left corner is row: 0, col: 0\n")
+    print("Press 'Enter' to confirm your inputs.")
     player = input("Please enter your name: ")
 
     # Creates the grid for the game.
