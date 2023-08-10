@@ -16,9 +16,13 @@ The winner sinks opponent's battleships first.
 ## Features
 
 - Greeting of the player and short explanation of the game
+
     ![Greeting](./readme-images/welcome.png)
+
 - Customisable player name
+
     ![Name](./readme-images/name.png)
+
 - Computer as opponent
     - The computer places it's shots randomly on the board.
 - Random ship placement
@@ -27,7 +31,7 @@ The winner sinks opponent's battleships first.
 - Error handling
     ![Error](./readme-images/error.png)
 - Clear interface
-    
+
 
 ## Validator Testing 
 
