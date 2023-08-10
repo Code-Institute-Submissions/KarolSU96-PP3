@@ -40,6 +40,11 @@ The winner sinks opponent's battleships first.
 
 PEP8  https://pep8ci.herokuapp.com/ - All clear, no errors found
 
+
+## Bugs
+
+During the development I encountered a bug in computer_grid function. The board of the computer had visible ships all the time. 
+I solved this bug by duplicating the board and printing only the hits and misses on the copy. 
 ## Deployment
 
 This project was deployed using Code Institute's mock terminal for Heroku.
