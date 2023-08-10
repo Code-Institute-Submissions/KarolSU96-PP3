@@ -54,6 +54,8 @@ If the player provides invalid input, they will be prompted to enter valid numer
 
     ![Error](./readme-images/error.png)
 
+- If borth, the player and the computer win, a tie will be announced.
+
 ## Bugs
 
 During the development I encountered a bug in computer_grid function. The board of the computer had visible ships all the time. 
