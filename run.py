@@ -79,18 +79,26 @@ def game():
                 print("Please write numbers!")
             else:
                 print("Number out of range! Chose from 1 to 5.")
-
+                
+    player_shots = set()
     def player_shot():
-        player_row = input_row() - 1
-        player_col = input_col() - 1
+        while True:
+            player_row = input_row() - 1
+            player_col = input_col() - 1
+            shot_location = (player_row,player_col)
 
-        if computer_board[player_row][player_col] == "@":
-            computer_board[player_row][player_col] = "X"
-            return True
-        else:
-            computer_board[player_row][player_col] = "*"
-            return False
-
+            if shot_location in player_shots:
+                    print("You already shot there! Choose a different location.")
+                    continue
+            else:
+                    player_shots.add(shot_location)
+                    if computer_board[player_row][player_col] == "@":
+                        computer_board[player_row][player_col] = "X"
+                        return True
+                    else:
+                        computer_board[player_row][player_col] = "*"
+                        return False
+    
     def computer_shot():
         while True:
             computer_row = random.randint(0, 4)
