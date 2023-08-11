@@ -52,11 +52,16 @@ The players compete against the computer and try to shoot down computers ships b
 - The game handles the wrong inputs for rows and columns by accepting only the numbers from 1 to 5.
 If the player provides invalid input, they will be prompted to enter valid numeric values between 1 to 5.
 
-    ![Error](./readme-images/error.png)
+    ![Between](./readme-images/between.png)
+
+- If player enters the point on the boad that was already targeted, the game prompts him to write row and col again.
+
+    ![Player](./readme-images/player.png)
 
 - If both, the player and the computer win, a tie will be announced. The game stops whenever there are no ships on one or both of the boards.
 
-- Bug when the computer places shots at on the already used points was fixed.
+- Bugfix when the computer places shots at on the already used points was fixed.
+
 
 ## Bugs
 
