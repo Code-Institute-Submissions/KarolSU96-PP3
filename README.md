@@ -56,6 +56,8 @@ If the player provides invalid input, they will be prompted to enter valid numer
 
 - If both, the player and the computer win, a tie will be announced. The game stops whenever there are no ships on one or both of the boards.
 
+- Bug when the computer places shots at on the already used points was fixed.
+
 ## Bugs
 
 During the development, I encountered a bug in the computer_grid function. The board of the computer had visible ships all the time. 
