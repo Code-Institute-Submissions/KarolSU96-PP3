@@ -92,17 +92,17 @@ def game():
             return False
 
     def computer_shot():
-        computer_row = random.randint(0, 4)
-        computer_col = random.randint(0, 4)
-        if board[computer_row][computer_col] == "@":
-            board[computer_row][computer_col] = "X"
-            return True
-        if board[computer_row][computer_col] == "X":
-            board[computer_row][computer_col] = "X"
-            return True
-        else:
-            board[computer_row][computer_col] = "*"
-            return False
+        while True:
+            computer_row = random.randint(0, 4)
+            computer_col = random.randint(0, 4)
+            if board[computer_row][computer_col] == "@":
+                board[computer_row][computer_col] = "X"
+                return True
+            elif board[computer_row][computer_col] == "X" or board[computer_row][computer_col] == "*":
+                continue
+            else:
+                board[computer_row][computer_col] = "*"
+                return False
 
     while any("@" in row for row in board) and any(
         "@" in row for row in computer_board
